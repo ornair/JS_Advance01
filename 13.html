@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 01 Result at Console</h1>
+    <script>
+        let n1 = prompt('กรุณากรอกตัวเลข a');
+        let n2 = prompt('กรุณากรอกตัวเลข b');
+        let arrn1 = n1.split("");
+        let arrn2 = n2.split("");
+        let sum = 0;
+        for(let i=0; i<arrn1.length; i++)
+        {
+            sum += Number(arrn1[i]);
+        }
+        for(let i=0; i<arrn2.length; i++)
+        {
+            sum += Number(arrn2[i]);
+        }
+        console.log(`${sum}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 02 Result at Console</h1>
+    <script>
+        let str = prompt('กรุณากรอกจำนวนเงิน');
+        toChange(str);
+        function toChange(money)
+            {
+                let str1000 = 0;
+                let str500 = 0;
+                let str100 = 0;
+                let str50 = 0;
+                let str20 = 0;
+                let str10 = 0;
+                let str5 = 0;
+                let str2 = 0;
+                let str1 = 0;
+                if(money >= 1000)
+                {
+                    str1000 = Math.floor(money/1000);
+                    money -= Number(str1000)*1000;
+                }
+                if(money >= 500)
+                {
+                    str500 = Math.floor(money/500);
+                    money -= Number(str500)*500;
+                }
+                if(money >= 100)
+                {
+                    str100 = Math.floor(money/100);
+                    money -= Number(str100)*100;
+                }
+                if(money >= 50)
+                {
+                    str50 = Math.floor(money/50);
+                    money -= Number(str50)*50;
+                }
+                if(money >= 20)
+                {
+                    str20 = Math.floor(money/20);
+                    money -= Number(str20)*20;
+                }
+                if(money >= 10)
+                {
+                    str10 = Math.floor(money/10);
+                    money -= Number(str10)*10;
+                }
+                if(money >= 5)
+                {
+                    str5 = Math.floor(money/5);
+                    money -= Number(str5)*5;
+                }
+                if(money >= 2)
+                {
+                    str2 = Math.floor(money/2);
+                    money -= Number(str2)*2;
+                }
+                if(money >= 1)
+                    str1 = money;
+                alert(`แบงค์พัน ${str1000} ใบ / แบงค์ห้าร้อย ${str500} ใบ / แบงค์ร้อย ${str100} ใบ / แบงค์ห้าสิบ ${str50} ใบ / แบงค์ยี่สิบ ${str20} ใบ / เหรียญสิบ ${str10} เหรียญ / เหรียญห้า ${str5} เหรียญ / เหรียญสองบาท ${str2} เหรียญ / เหรียญบาท ${str1} เหรียญ`);
+            }
+    </script>
+</body>
+</html>

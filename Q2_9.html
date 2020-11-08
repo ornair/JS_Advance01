@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 02 Result at Console</h1>
+    <script>
+        let str = prompt('กรุณากรอกตัวเลข');
+        maxPossibleNumber(str);
+        function maxPossibleNumber(number)
+            {
+                let index = String(number).indexOf(".");
+                let strnum = String(number).replace(".", "");
+                let arrNumber = strnum.split("");
+                arrNumber.sort(function(a, b){return b - a});
+                strnum = arrNumber.toString().replace(/,/g, "");
+                if(index > -1)
+                    strnum = strnum.slice(0, index) + "." + strnum.slice(index, strnum.length);
+                alert(`จำนวนที่มากที่สุด ${strnum}`);
+            }
+    </script>
+</body>
+</html>

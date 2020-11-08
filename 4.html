@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 01 Result at Console</h1>
+    <script>
+        let n = prompt('กรุณากรอกตัวเลข');
+        let count = 1;
+        let i=2;
+        let sum=0;
+        let arr =[];
+        while (count <= (n))
+        {
+            let k = 2;
+            while (true) {
+                if (k >= i) break;
+                if (i % k == 0) break;
+                k++;
+            }
+            if(i == k)
+            {
+                arr.push(i)
+                sum += i;
+                count++;
+            }
+            i++;
+        }
+        console.log(`${arr}`);
+        console.log(`sum = ${sum}`);
+    </script>
+</body>
+</html>

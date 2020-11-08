@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 02 Result at Console</h1>
+    <script>
+        let str = prompt('กรุณากรอก Array');
+        let arr = str.split("");
+        let sum = 0;
+        arr.forEach(evenArraySum);
+        function evenArraySum(item) {
+            if(Number(item) %2 == 0) sum += Number(item);
+        }
+        alert(`sum = ${sum}`);
+    </script>
+</body>
+</html>

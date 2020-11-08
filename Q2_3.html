@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 02 Result at Console</h1>
+    <script>
+        let str = prompt('กรุณากรอก');
+        function thaiTypeOf(str) {
+            if(!isNaN(Number(str)))
+                return "ตัวเลข";
+            else if(str === "true" || str === "false")
+                return "จริงหรือเท็จ";
+            else if(typeof(str) == "function")
+                return "ฟังก์ชั่น";
+            else if(typeof(str) == "object")
+                return "ออปเจ็ค";
+            else if(typeof(str) == "string")
+                return "ข้อความ";
+        }
+        alert(thaiTypeOf(str));
+    </script>
+</body>
+</html>

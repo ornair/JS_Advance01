@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 01 Result at Console</h1>
+    <script>
+        
+        let list = [];
+        let n = prompt('กรุณากรอกตัวเลข กรณีต้องการหยุดให้กรอก true หรือ false');
+        while(!isNaN(n))
+        {
+            list.push(n);
+            n = prompt('กรุณากรอกตัวเลข กรณีต้องการหยุดให้กรอก true หรือ false..');
+        }
+        if(n === "true")
+            list.sort(a, b, true);
+        else
+            list.sort(a, b, false);
+        console.log(`${list}`);
+
+        function sort(a, b)
+        {
+            
+        }
+    </script>
+</body>
+</html>

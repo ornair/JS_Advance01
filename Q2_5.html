@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 02 Result at Console</h1>
+    <script>
+        let str = prompt('กรุณากรอกวันที่ (dd-MM-yyyy)');
+        let arr = str.split("-");
+        if(arr.length < 3)
+            alert(`กรอกวันที่ไม่ถูก format`);
+        else
+        {
+            let dt = arr[0];
+            let month = arr[1];
+            let year = arr[2];
+            
+            if (Number(month) > 12)
+                alert(`Error`);
+            else if(Number(month) == 4 || Number(month) == 5 || Number(month) == 9 || Number(month) == 11){
+                if(dt >30)
+                    alert(`Error`);
+                else    
+                    combineDate(dt, Number(month), year)
+            }
+            else{
+                combineDate(dt, Number(month), year)
+            }
+        }
+       
+        function combineDate(date, m, y)
+            {
+                let strMonth = "";
+                let strYear = "";
+                switch (m) {
+                    case 1:
+                        strMonth = "มกราคม";
+                        break;
+                    case 2:
+                        strMonth = "กุมภาพันธ์";
+                        break;
+                    case 3:
+                        strMonth = "มีนาคม";
+                        break;
+                    case 4:
+                        strMonth = "เมษายน";
+                        break;
+                    case 5:
+                        strMonth = "พฤษภาคม";
+                        break;
+                    case 6:
+                        strMonth = "มิถุนายน";
+                        break;
+                    case 7:
+                        strMonth = "กรกฎาคม";
+                        break;
+                    case 8:
+                        strMonth = "สิงหาคม";
+                        break;
+                    case 9:
+                        strMonth = "กันยายน";
+                        break;
+                    case 10:
+                        strMonth = "ตุลาคม";
+                        break;
+                    case 11:
+                        strMonth = "พฤศจิกายน";
+                        break;
+                    case 12:
+                        strMonth = "ธันวาคม";
+                        break;
+                }
+                strYear = Number(y)+543;
+                alert(`วันที่ ${date} เดือน${strMonth} พ.ศ.${strYear}`);
+            }
+    </script>
+</body>
+</html>

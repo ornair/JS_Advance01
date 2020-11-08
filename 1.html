@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script Advance 01 Result at Console</h1>
+    <script>
+        for (let i=2; i<=100; i++)
+        {
+            let k = 2;
+            while (true) {
+                if (k >= i) break;
+                if ((i % k) == 0) break;
+                k++;
+            }
+            if(i == k)
+                console.log(`${i}`);
+        }
+    </script>
+</body>
+</html>
